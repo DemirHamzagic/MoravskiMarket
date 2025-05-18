@@ -1,0 +1,26 @@
+.pageTypeText {
+	padding-bottom: 2rem;
+}
+
+
+.aboutUsDiv {
+	padding: 1rem;
+}
+
+.orangeAboutText {
+	color: rgb(255, 72, 0);
+	font-size: 2rem;
+}
+
+.aboutLinkText {
+	color: rgb(107, 107, 255);
+	text-decoration: underline;
+}
+
+.aboutHeadDiv {
+	text-align: center;
+}
+
+.aboutUsText {
+	padding: 1rem 0 1rem 0;
+}

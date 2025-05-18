@@ -1,0 +1,77 @@
+.backgroundImage {
+	width: 100%;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.footerInfoDiv {
+	background-color: rgb(33, 121, 69);
+	display: flex;
+	color: white;
+}
+
+.footerChildDiv {
+	display: flex;
+	flex-direction: column;
+	width: 20%;
+	padding: 0.7rem;
+}
+
+.footerLogoDiv {
+	width: 20%;
+	padding: 0.7rem;
+}
+
+.footerIcon {
+	padding: 0.3rem;
+	font-size: 1.7rem;
+	text-align: center;
+}
+
+.footerChildDiv button {
+	margin: 0.3rem;
+	color: white;
+	background-color: rgb(33, 121, 69);
+	border: none;
+	text-align: left;
+	padding: 0;
+}
+
+.footerChildDiv p {
+	padding: 0;
+	margin: 0.3rem;
+}
+
+.headText {
+	margin: 0rem;
+	text-decoration: underline;
+}
+
+.footerPic {
+	width: 20%;
+	height: 20%;
+}
+
+.footerLongText {
+	background-color: rgb(33, 121, 69);
+	color: white;
+	padding: 1rem;
+	margin: 0;
+	text-align: center;
+}
+
+.footerColoredDiv {
+	background-color: rgb(33, 121, 69);
+	padding: 0.5rem 0 2rem 0;
+}
+
+.footerColoredDiv p {
+	background-color: rgb(245, 186, 108);
+	padding: 0.6rem 0 0.6rem 0;
+	text-align: center;
+}
+
+.footerColoredDiv span {
+	color: rgb(255, 72, 0);
+}

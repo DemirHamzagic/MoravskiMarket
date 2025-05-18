@@ -1,0 +1,111 @@
+.contactHeader {
+	font-size: 1.5rem;
+}
+
+.contactFlexDiv {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.contactLocDiv {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.ContactPageDiv {
+	margin-left: 0.5rem;
+}
+
+.ContactPageDiv p {
+	font-size: 1.2rem;
+}
+
+.contactDiv {
+	margin-right: 3rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.contactWorkTimeDiv {
+	width: 20%;
+}
+
+.contactAdressDiv {
+	width: 20%;
+}
+
+.contactWorkTimeDiv p {
+	margin-bottom: 5rem;
+}
+
+.contactDiv p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.contactIcon {
+	padding: 0.3rem;
+	font-size: 1.7rem;
+}
+
+.contactSocialDiv p:hover,
+.contactFlexDiv p:hover {
+	color: rgb(255, 72, 0);
+}
+
+/* FORM COMPONENT */
+
+.contactFormDiv {
+	display: flex;
+	flex-direction: column;
+	margin-right: 0.5rem;
+}
+
+.contactFormDiv div {
+	display: flex;
+	justify-content: space-between;
+}
+
+.contactFormDiv div input {
+	width: 48%;
+	margin: 0.5rem;
+	padding: 1rem;
+}
+
+.contactInput {
+	margin: 0.5rem;
+	padding: 1rem;
+}
+
+.contactMessageDiv {
+	margin: 0.5rem;
+	padding: 1.6rem;
+	margin-bottom: 1.5rem;
+}
+
+.contactInput,
+.contactMessageDiv,
+.contactFormDiv div input {
+	background-color: rgb(248, 248, 248);
+	border-radius: 0.3rem;
+	border: none;
+	font-size: 1.2rem;
+}
+
+.contactFormButton {
+	width: 8rem;
+	font-size: 1.2rem;
+	padding: 0.6rem 0;
+	border: none;
+	border-radius: 0.3rem;
+	background-color: rgb(33, 121, 69);
+	color: white;
+	margin-bottom: 7rem;
+}
+
+.contactImage {
+	margin-bottom: 10rem;
+}

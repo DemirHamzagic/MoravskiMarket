@@ -1,0 +1,48 @@
+.companyPageDiv {
+	margin: 0.5rem;
+}
+
+.companyInputDiv {
+	display: flex;
+	justify-content: center;
+}
+
+.companyInput {
+	width: 50%;
+	border: none;
+	padding: 1rem 0.5rem;
+	margin-bottom: 1rem;
+	background-color: rgb(247, 247, 247);
+}
+
+.companyImageDiv {
+	display: flex;
+	align-items: center;
+}
+
+.companyImage {
+	width: 5rem;
+}
+
+.companyLetterDiv {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid rgb(207, 207, 207);
+}
+
+.companyDivHeader {
+	padding-right: 6rem;
+	margin-bottom: 4rem;
+	margin-top: 0;
+	font-size: 3rem;
+}
+
+.companyDivText1 {
+	width: 10rem;
+	font-weight: 600;
+	padding-left: 0.7rem;
+}
+
+.companyDivText2 {
+	color: gray;
+}

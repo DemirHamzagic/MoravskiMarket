@@ -1,0 +1,55 @@
+.NewsPageDiv {
+	margin: 0.5rem;
+}
+
+.newsInputDiv {
+	display: flex;
+	justify-content: center;
+}
+
+.NewsSearchInput {
+	width: 50%;
+	border: none;
+	padding: 1rem 0.5rem;
+	background-color: rgb(247, 247, 247);
+}
+
+.NewsPageDiv div {
+	display: flex;
+	align-items: left;
+	margin-bottom: 2rem;
+}
+
+.newsDiv img {
+	padding-right: 2rem;
+	width: 20rem;
+}
+
+.newsTextDiv {
+	width: 100%;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	margin-bottom: 6rem;
+}
+
+.newsTextDiv p,
+.newsTextDiv h1 {
+	width: 100%;
+}
+
+.newsTextDiv h1 {
+	margin: 0.2rem;
+}
+
+.newsMoreText {
+	color: rgb(255, 72, 0);
+}
+
+.newsBoxDiv {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: left;
+}
