@@ -3,27 +3,28 @@ import homeImage1 from "../assets/homePic1.jpg";
 import homeImage2 from "../assets/homePic2.jpg";
 import NeedMorePic from "../assets/NeedMorePic.jpg";
 
-import HomeProduct_1 from "../components/HomeComponents/HomeProduct_1";
+import HomeProduct1 from "../components/HomeComponents/HomeProduct1";
 import HomeWelcomeDiv from "../components/HomeComponents/HomeWelcomeDiv";
-import HomeProduct_2 from "../components/HomeComponents/HomeProduct_2";
-import HomeProduct_3 from "../components/HomeComponents/HomeProduct_3";
+import HomeProduct2 from "../components/HomeComponents/HomeProduct2";
+import HomeProduct3 from "../components/HomeComponents/HomeProduct3";
 import HomeNews from "../components/HomeComponents/HomeNews";
 import HomeLogo from "../components/HomeComponents/HomeLogo";
 
 import { MyContext } from "../components/ContextFile";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 const Home = () => {
-	const { currentDot, setDot, activeDot, inactiveDot } =
-		useContext(MyContext);
+	const { activeDot, inactiveDot } = useContext(MyContext);
+	const [currentDot1, setDot1] = useState(0);
+	const [currentDot2, setDot2] = useState(0);
+	const [currentDot3, setDot3] = useState(0);
+	const [currentDot4, setDot4] = useState(0);
+	const [currentDot5, setDot5] = useState(0);
 	const homeImageArray = [0, 1];
 	const productArray1 = [0, 1, 2, 3, 4, 5, 6, 7];
 	const productArray2 = [0, 1, 2, 3];
 	const productArray3 = [0, 1, 2, 3, 4];
 	return (
-		<div
-			style={{ paddingRight: currentDot === 1 ? "1rem" : "0rem" }}
-			className="HomePageDiv"
-		>
+		<div className="HomePageDiv">
 			<div className="HomeComponentDiv">
 				<HomeImage
 					homeImage={homeImage1}
@@ -42,9 +43,9 @@ const Home = () => {
 						<div
 							className="dotDiv"
 							key={index}
-							onClick={() => setDot(index)}
+							onClick={() => setDot1(index)}
 							style={
-								currentDot === index ? activeDot : inactiveDot
+								currentDot1 === index ? activeDot : inactiveDot
 							}
 						></div>
 					);
@@ -56,16 +57,16 @@ const Home = () => {
 			<div className="productDiv1">
 				<h1>Kupuj lokalno, da komšiji krava bude živa i zdrava!</h1>
 				<p>Izdvajamo za vas zdrave i kvalitetne domaće proizvode!</p>
-				<HomeProduct_1 />
+				<HomeProduct1 />
 				<div className="productDots">
 					{productArray1.map((_, index) => {
 						return (
 							<div
 								className="dotDiv"
 								key={index}
-								onClick={() => setDot(index)}
+								onClick={() => setDot2(index)}
 								style={
-									currentDot === index
+									currentDot2 === index
 										? activeDot
 										: inactiveDot
 								}
@@ -77,7 +78,7 @@ const Home = () => {
 
 			<div className="productDiv2">
 				<h1 className="product2Text">Najprodavaniji artikli</h1>
-				<HomeProduct_2 />
+				<HomeProduct2 />
 			</div>
 			<div className="productDots">
 				{productArray2.map((_, index) => {
@@ -85,9 +86,9 @@ const Home = () => {
 						<div
 							className="dotDiv"
 							key={index}
-							onClick={() => setDot(index)}
+							onClick={() => setDot3(index)}
 							style={
-								currentDot === index ? activeDot : inactiveDot
+								currentDot3 === index ? activeDot : inactiveDot
 							}
 						></div>
 					);
@@ -97,16 +98,16 @@ const Home = () => {
 			<div className="productDiv3">
 				<h1>Pcelarski proizvodi</h1>
 				<p>Prirodni pčelinji proizvodi sa dugom tradicijom</p>
-				<HomeProduct_3 />
+				<HomeProduct3 />
 				<div className="productDots">
 					{productArray3.map((_, index) => {
 						return (
 							<div
 								className="dotDiv"
 								key={index}
-								onClick={() => setDot(index)}
+								onClick={() => setDot4(index)}
 								style={
-									currentDot === index
+									currentDot4 === index
 										? activeDot
 										: inactiveDot
 								}
@@ -133,9 +134,9 @@ const Home = () => {
 						<div
 							className="dotDiv"
 							key={index}
-							onClick={() => setDot(index)}
+							onClick={() => setDot5(index)}
 							style={
-								currentDot === index ? activeDot : inactiveDot
+								currentDot5 === index ? activeDot : inactiveDot
 							}
 						></div>
 					);

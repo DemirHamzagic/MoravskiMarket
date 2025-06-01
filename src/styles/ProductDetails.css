@@ -1,0 +1,44 @@
+.productDetailPageDiv {
+	margin: 0.5rem;
+}
+
+.detailDiv {
+	display: flex;
+	margin-top: 4rem;
+}
+
+.productDetailImage {
+	height: 30rem;
+	width: 30rem;
+	padding-right: 3rem;
+}
+
+.sideImage {
+	width: 15rem;
+	padding-left: 5rem;
+}
+
+.priceDetailText {
+	color: rgb(255, 72, 0);
+}
+
+.cartAddButton {
+	background-color: rgb(55, 196, 50);
+	color: white;
+	border: none;
+	border-radius: 0.5rem;
+	font-size: 1.5rem;
+	height: 3rem;
+	width: 20rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.missingItem {
+	font-size: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 20rem;
+}

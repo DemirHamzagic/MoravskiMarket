@@ -5,12 +5,11 @@ import slika3 from "../assets/CentarPictures/centarPic3.jpg";
 import slika4 from "../assets/CentarPictures/centarPic4.jpg";
 
 import { MyContext } from "../components/ContextFile";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 const DistirbutivniCentar = () => {
 	const CentarImageArray = [0, 1, 2, 3];
-	const { currentDot, setDot, activeDot, inactiveDot } =
-		useContext(MyContext);
-
+	const { activeDot, inactiveDot } = useContext(MyContext);
+	const [currentDot, setDot] = useState(0);
 	return (
 		<div className="centarPageDiv">
 			<p className="pageTypeText">Naslovna - Kontakt</p>

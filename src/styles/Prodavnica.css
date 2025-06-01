@@ -1,0 +1,108 @@
+.shopPageDiv {
+	margin: 0.5rem;
+}
+
+.shopDiv {
+	display: flex;
+}
+
+.shopCategoryDiv {
+	display: flex;
+	flex-direction: column;
+	width: 20rem;
+}
+
+.shopCategoryDiv p {
+	color: rgb(255, 72, 0);
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.shopCategoryDiv button {
+	text-align: left;
+	padding-left: 1rem;
+	border: none;
+	background-color: white;
+}
+
+.shopCategoryDiv button:hover {
+	color: rgb(255, 72, 0);
+}
+
+.shopCategoryDiv img {
+	margin-top: 4rem;
+}
+
+.ShopProductList {
+	margin-left: 0.5rem;
+}
+
+.shopHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.ShopProduct {
+	margin: 0.5rem;
+	text-align: start;
+	width: 14.5rem;
+	background-color: rgb(241, 241, 241);
+}
+
+.ShopProductImage {
+	height: 14.5rem;
+}
+
+.ShopProductImage:hover {
+	opacity: 0.8;
+}
+
+.ShopProductName {
+	font-size: 1.1rem;
+	padding: 0 0.5rem 0 0.5rem;
+}
+
+.ShopPriceText {
+	padding: 0 0.5rem 0 0.5rem;
+	height: 2rem;
+	color: rgb(255, 72, 0);
+	padding: 0 0.5rem 0 0.5rem;
+}
+
+.ShopProduct p {
+	padding: 0 0.5rem 0 0.5rem;
+}
+
+.ShopProduct p span {
+	text-decoration: underline;
+}
+
+.ShopProduct p span:hover,
+.ShopProductName:hover {
+	color: rgb(255, 72, 0);
+}
+
+.shopBox {
+	background-color: rgb(240, 240, 240);
+	height: 2.2rem;
+	width: 2.2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+	margin: 0.25rem;
+}
+
+.shopBoxDiv {
+	display: flex;
+}
+
+.shopItems {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	border-top: 1px solid rgb(202, 202, 202);
+	border-bottom: 1px solid rgb(202, 202, 202);
+	padding-bottom: 0.6rem;
+}

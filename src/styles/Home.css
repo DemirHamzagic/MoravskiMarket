@@ -92,16 +92,21 @@
 .HomeProduct {
 	margin: 0.5rem;
 	text-align: start;
-	width: 16rem;
+	width: 14.5rem;
 	background-color: rgb(241, 241, 241);
 }
 
-.HomeProduct img {
-	height: 16rem;
+.HomeProductImage {
+	height: 14.5rem;
+	position: relative;
+}
+
+.HomeProductImage:hover {
+	opacity: 0.8;
 }
 
 .HomeProductName {
-	font-size: 1.2rem;
+	font-size: 1.1em;
 	padding: 0 0.5rem 0 0.5rem;
 }
 
@@ -261,4 +266,30 @@
 
 .LogoLongText {
 	padding: 0 10rem;
+}
+
+.ProductImageDiv {
+	position: relative;
+}
+
+.heartIconProductA {
+	width: 2rem;
+	height: 2rem;
+	padding: 0.3rem;
+	color: rgb(255, 72, 0);
+	position: absolute;
+	left: 0.55rem;
+	bottom: 0.55rem;
+	background-color: white;
+	border-radius: 100%;
+}
+
+.heartIconProductI {
+	width: 2.2rem;
+	height: 2.2rem;
+	position: absolute;
+	left: 0.5rem;
+	bottom: 0.5rem;
+	background-color: white;
+	border-radius: 100%;
 }

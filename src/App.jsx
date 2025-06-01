@@ -14,6 +14,7 @@ import Login from "./pages/Login";
 import { MyContext } from "./components/ContextFile";
 import Companies from "./pages/Companies";
 import Prodavnica from "./pages/Prodavnica";
+import ProductDetails from "./components/ProductDetails";
 
 const App = () => {
 	return (
@@ -22,33 +23,22 @@ const App = () => {
 				<Header />
 				<Routes>
 					<Route path="/" element={<Home />} />
-				</Routes>
-				<Routes>
 					<Route path="/aboutUs" element={<AboutUs />} />
-				</Routes>
-				<Routes>
 					<Route path="/contact" element={<Contact />} />
-				</Routes>
-				<Routes>
 					<Route
 						path="/distributivni-centar"
 						element={<DistirbutivniCentar />}
 					/>
-				</Routes>
-				<Routes>
 					<Route path="/novosti" element={<News />} />
-				</Routes>
-				<Routes>
 					<Route path="/lista-zelja" element={<Wishlist />} />
-				</Routes>
-				<Routes>
 					<Route path="/nalog" element={<Login />} />
-				</Routes>
-				<Routes>
 					<Route path="/proizvodjaci" element={<Companies />} />
-				</Routes>
-				<Routes>
 					<Route path="/prodavnica" element={<Prodavnica />} />
+
+					<Route
+						path="/prodavnica/:id"
+						element={<ProductDetails />}
+					/>
 				</Routes>
 				<Footer />
 			</BrowserRouter>

@@ -10,7 +10,7 @@ import { FiSun } from "react-icons/fi";
 import { TbGridDots } from "react-icons/tb";
 
 const HeaderLinks = () => {
-	const { theme, setTheme, setShow1, setShow2, setShowSidebar } =
+	const { theme, setTheme, setShow1, setShow2, setShowSidebar, wishList } =
 		useContext(MyContext);
 	return (
 		<div className="linkHeader">
@@ -57,7 +57,10 @@ const HeaderLinks = () => {
 					{theme === "white" ? <IoIosMoon /> : <FiSun />}
 				</button>
 				<Link to="/lista-zelja" className="iconLink">
-					<CiHeart />
+					<div className="heartHeaderDiv">
+						<CiHeart />
+						<div className="">{wishList.length}</div>
+					</div>
 				</Link>
 				<FaBoxArchive
 					className="iconLink"

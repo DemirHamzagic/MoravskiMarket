@@ -13,3 +13,8 @@ input {
 	font-weight: 500;
 	font-family: "Prompt", sans-serif;
 }
+
+.productLinkName {
+	text-decoration: none;
+	color: black;
+}
