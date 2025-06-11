@@ -10,6 +10,7 @@ import image from "../assets/contactImage.jpg";
 
 import "../styles/Contact.css";
 const Contact = () => {
+	window.scrollTo(0, 0);
 	return (
 		<div className="ContactPageDiv">
 			<p className="pageTypeText">Naslovna - Kontakt</p>

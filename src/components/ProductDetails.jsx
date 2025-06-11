@@ -3,7 +3,7 @@ import { FaBoxArchive } from "react-icons/fa6";
 
 import slika2 from "../assets/detailImage.png";
 
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { MyContext } from "./ContextFile";
 import { useContext } from "react";
 
@@ -58,7 +58,9 @@ const ProductDetails = () => {
 						osnovu zakona o zaštiti potrošača.
 					</p>
 				</div>
-				<img className="sideImage" src={slika2} />
+				<Link to={"/aboutUs"}>
+					<img className="sideImage" src={slika2} />
+				</Link>
 			</div>
 		</div>
 	);

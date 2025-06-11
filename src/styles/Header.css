@@ -81,6 +81,14 @@ button {
 	font-size: 1rem;
 }
 
+.activeLink {
+	color: white;
+	text-decoration: none;
+	padding: 0.7rem;
+	font-size: 1rem;
+	text-decoration: underline 5px solid rgb(241, 241, 241);
+}
+
 .categoryButton {
 	background-color: rgb(33, 121, 69);
 	font-family: "Prompt", sans-serif;

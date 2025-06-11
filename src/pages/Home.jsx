@@ -10,9 +10,12 @@ import HomeProduct3 from "../components/HomeComponents/HomeProduct3";
 import HomeNews from "../components/HomeComponents/HomeNews";
 import HomeLogo from "../components/HomeComponents/HomeLogo";
 
+import { Link } from "react-router-dom";
+
 import { MyContext } from "../components/ContextFile";
 import { useContext, useState } from "react";
 const Home = () => {
+	window.scrollTo(0, 0);
 	const { activeDot, inactiveDot } = useContext(MyContext);
 	const [currentDot1, setDot1] = useState(0);
 	const [currentDot2, setDot2] = useState(0);
@@ -26,16 +29,20 @@ const Home = () => {
 	return (
 		<div className="HomePageDiv">
 			<div className="HomeComponentDiv">
-				<HomeImage
-					homeImage={homeImage1}
-					headerText="Dobro dosli u Moravski Market!"
-					infoText="Najrazlicitija ponuda proizvoda lokalnih proizvodjaca!"
-				/>
-				<HomeImage
-					homeImage={homeImage2}
-					headerText="Distributivni centar"
-					infoText="Preuzmite porucene proizvode, sve na jednom mestu"
-				/>
+				<Link to={"/prodavnica"}>
+					<HomeImage
+						homeImage={homeImage1}
+						headerText="Dobro dosli u Moravski Market!"
+						infoText="Najrazlicitija ponuda proizvoda lokalnih proizvodjaca!"
+					/>
+				</Link>
+				<Link to={"/distributivni-centar"}>
+					<HomeImage
+						homeImage={homeImage2}
+						headerText="Distributivni centar"
+						infoText="Preuzmite porucene proizvode, sve na jednom mestu"
+					/>
+				</Link>
 			</div>
 			<div className="productDots">
 				{homeImageArray.map((_, index) => {
@@ -118,7 +125,9 @@ const Home = () => {
 			</div>
 
 			<div className="componentDiv4">
-				<img src={NeedMorePic} />
+				<Link to={"/distributivni-centar"}>
+					<img src={NeedMorePic} />
+				</Link>
 				<h1>Zelite da prodajete online!</h1>
 				<p className="componentDiv4Text1">
 					Uvecajte vase prihode pristupanjem nasoj mrezi prodavaca na

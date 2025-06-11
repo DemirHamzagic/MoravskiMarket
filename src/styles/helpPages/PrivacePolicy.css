@@ -1,0 +1,25 @@
+.PrivacePolicyPageDiv {
+	margin: 0.5rem;
+	margin-top: 2rem;
+	margin-bottom: 15rem;
+}
+
+.PrivacePolicyPageDiv div {
+	margin: 1rem;
+	margin-top: 1.5rem;
+}
+
+.PrivacePolicyHeader {
+	color: rgb(255, 72, 0);
+	text-align: center;
+	margin-bottom: 2rem;
+	font-size: 1.9rem;
+}
+
+.PrivacePolicyPageDiv span {
+	font-weight: 600;
+}
+
+.PrivacePolicyPageDiv p {
+	margin: 1.5rem 0;
+}

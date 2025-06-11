@@ -4,9 +4,11 @@ import slika2 from "../assets/CentarPictures/centarPic2.jpg";
 import slika3 from "../assets/CentarPictures/centarPic3.jpg";
 import slika4 from "../assets/CentarPictures/centarPic4.jpg";
 
+import { Link } from "react-router-dom";
 import { MyContext } from "../components/ContextFile";
 import { useContext, useState } from "react";
 const DistirbutivniCentar = () => {
+	window.scrollTo(0, 0);
 	const CentarImageArray = [0, 1, 2, 3];
 	const { activeDot, inactiveDot } = useContext(MyContext);
 	const [currentDot, setDot] = useState(0);
@@ -23,8 +25,10 @@ const DistirbutivniCentar = () => {
 				siguran i transparentan način. Ukoliko želite da prodajete vaše
 				proizvode preko našeg portala možete nas pozvati na tel: 061 67
 				15 941 ili nas kontaktirati preko{" "}
-				<span className="centarContactSpan">kontakt forme</span>, a
-				možete i direkno doći u distributivni centar.
+				<Link to={"/contact"} className="centarContactSpan">
+					kontakt forme
+				</Link>
+				, a možete i direkno doći u distributivni centar.
 			</p>
 			<h2>Distributivni centar</h2>
 			<p>

@@ -15,6 +15,13 @@ import { MyContext } from "./components/ContextFile";
 import Companies from "./pages/Companies";
 import Prodavnica from "./pages/Prodavnica";
 import ProductDetails from "./components/ProductDetails";
+import ShopCategories from "./components/ShopCategories";
+import KakoNaruciti from "./pages/helpPages/KakoNaruciti";
+import NacinDostave from "./pages/helpPages/NacinDostave";
+import NacinPlacanja from "./pages/helpPages/NacinPlacanja";
+import PrivacePolicy from "./pages/helpPages/PrivacePolicy";
+import ZastoKupiti from "./pages/helpPages/ZastoKupiti";
+import BlogPage from "./components/BlogPage";
 
 const App = () => {
 	return (
@@ -34,11 +41,20 @@ const App = () => {
 					<Route path="/nalog" element={<Login />} />
 					<Route path="/proizvodjaci" element={<Companies />} />
 					<Route path="/prodavnica" element={<Prodavnica />} />
-
+					<Route
+						path="/categorije/:category"
+						element={<ShopCategories />}
+					/>
 					<Route
 						path="/prodavnica/:id"
 						element={<ProductDetails />}
 					/>
+					<Route path="/zasto-kupiti" element={<ZastoKupiti />} />
+					<Route path="/kako-kupiti" element={<KakoNaruciti />} />
+					<Route path="/nacin-dostave" element={<NacinDostave />} />
+					<Route path="/nacin-placanja" element={<NacinPlacanja />} />
+					<Route path="/privace-policy" element={<PrivacePolicy />} />
+					<Route path="/news/:vest" element={<BlogPage />} />
 				</Routes>
 				<Footer />
 			</BrowserRouter>

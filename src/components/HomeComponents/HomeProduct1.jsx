@@ -13,7 +13,9 @@ const HomeProduct1 = () => {
 
 	return (
 		<div className="HomeProductList">
-			<img className="productImage" src={productImage} />
+			<Link to={"/zasto-kupiti"}>
+				<img className="productImage" src={productImage} />
+			</Link>
 			{ProductList2.map((el, index) => {
 				const Logo = liked[index] ? FaHeart : CiHeart;
 				const logoClass = liked[index]
@@ -37,7 +39,6 @@ const HomeProduct1 = () => {
 									setLiked(newLiked);
 									const product = {
 										...el,
-										image: ProductImages2[index],
 									};
 									newLiked[index] &&
 									!wishList.some(

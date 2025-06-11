@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { MyContext } from "../ContextFile";
-import { Link } from "react-router-dom";
-
+import { Link, useLocation } from "react-router-dom";
 import { IoIosMoon } from "react-icons/io";
 import { CiHeart } from "react-icons/ci";
 import { CiUser } from "react-icons/ci";
@@ -10,6 +9,7 @@ import { FiSun } from "react-icons/fi";
 import { TbGridDots } from "react-icons/tb";
 
 const HeaderLinks = () => {
+	const location = useLocation();
 	const { theme, setTheme, setShow1, setShow2, setShowSidebar, wishList } =
 		useContext(MyContext);
 	return (
@@ -25,25 +25,72 @@ const HeaderLinks = () => {
 				KATEGORIJE
 			</button>
 			<div className="linkDiv">
-				<Link to="/" className="linkText">
+				<Link
+					to="/"
+					className={
+						location.pathname === "/" ? "activeLink" : "linkText"
+					}
+				>
 					Naslovna
 				</Link>
-				<Link to="/aboutUs" className="linkText">
+				<Link
+					to="/aboutUs"
+					className={
+						location.pathname === "/aboutUs"
+							? "activeLink"
+							: "linkText"
+					}
+				>
 					O nama
 				</Link>
-				<Link to="/prodavnica" className="linkText">
+				<Link
+					to="/prodavnica"
+					className={
+						location.pathname === "/prodavnica"
+							? "activeLink"
+							: "linkText"
+					}
+				>
 					Prodavnica
 				</Link>
-				<Link to="/proizvodjaci" className="linkText">
+				<Link
+					to="/proizvodjaci"
+					className={
+						location.pathname === "/proizvodjaci"
+							? "activeLink"
+							: "linkText"
+					}
+				>
 					Proizvodjaci
 				</Link>
-				<Link to="/distributivni-centar" className="linkText">
+				<Link
+					to="/distributivni-centar"
+					className={
+						location.pathname === "/distributivni-centar"
+							? "activeLink"
+							: "linkText"
+					}
+				>
 					Distributivni cenat
 				</Link>
-				<Link to="/novosti" className="linkText">
+				<Link
+					to="/novosti"
+					className={
+						location.pathname === "/novosti"
+							? "activeLink"
+							: "linkText"
+					}
+				>
 					Novosti
 				</Link>
-				<Link to="/contact" className="linkText">
+				<Link
+					to="/contact"
+					className={
+						location.pathname === "/contact"
+							? "activeLink"
+							: "linkText"
+					}
+				>
 					Kontakt
 				</Link>
 			</div>

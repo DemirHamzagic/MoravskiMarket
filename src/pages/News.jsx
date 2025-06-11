@@ -2,6 +2,7 @@ import "../styles/News.css";
 import NewsImages from "../components/NewsImages";
 
 const News = () => {
+	window.scrollTo(0, 0);
 	return (
 		<div className="NewsPageDiv">
 			<p className="pageTypeText">Naslovna - Novosti</p>

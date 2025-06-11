@@ -18,6 +18,10 @@
 	padding-left: 5rem;
 }
 
+.sideImage:hover {
+	opacity: 0.8;
+}
+
 .priceDetailText {
 	color: rgb(255, 72, 0);
 }

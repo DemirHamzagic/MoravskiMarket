@@ -9,6 +9,7 @@
 }
 
 .homeImageDiv {
+	margin-top: 0.5rem;
 	position: relative;
 	width: 50%;
 	padding: 0.5rem;
@@ -19,7 +20,8 @@
 }
 
 .homeImageDiv img {
-	width: 100%;
+	height: 23rem;
+	width: 41rem;
 }
 
 .homeImageTextBox {
@@ -28,8 +30,8 @@
 	left: 2.5rem;
 	background-color: rgb(33, 121, 69);
 	color: white;
-	width: 60%;
-	height: 25%;
+	width: 23rem;
+	height: 22%;
 	font-size: 1rem;
 	padding: 0.5rem 1rem 0.5rem 0.5rem;
 }
@@ -86,7 +88,22 @@
 
 .productImage {
 	width: 8rem;
-	margin: 0.5rem;
+	margin: 0.5rem 0.5rem 0 0.5rem;
+	height: 30rem;
+}
+
+.productImage:hover {
+	opacity: 0.8;
+}
+
+.productImage2 {
+	width: 18rem;
+	margin: 0.5rem 0.5rem 0 0.5rem;
+	height: 31rem;
+}
+
+.productImage2:hover {
+	opacity: 0.8;
 }
 
 .HomeProduct {

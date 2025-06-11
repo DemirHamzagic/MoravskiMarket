@@ -1,0 +1,41 @@
+.shopCategoryPageDiv {
+	margin: 0.5rem;
+}
+
+.shopCategoryMainDiv {
+	margin-top: 3rem;
+	display: flex;
+}
+
+.ProizvodjaciText {
+	color: rgb(255, 72, 0);
+}
+
+.categoryListDiv {
+	width: 20rem;
+}
+
+.categoryListDiv a {
+	color: black;
+	text-decoration: none;
+}
+
+.categoryListDiv a:hover {
+	color: rgb(255, 72, 0);
+}
+
+.CategoryBigText,
+.ProizvodjaciText {
+	font-size: 1.4rem;
+	font-weight: 600;
+}
+
+.shopCategoryProducts {
+	margin-left: 0.5rem;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.ShopProduct {
+	height: 30rem;
+}

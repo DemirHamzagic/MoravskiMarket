@@ -1,0 +1,26 @@
+.KakoNarucitiPageDiv {
+	margin: 0.5rem;
+	margin-top: 2rem;
+	margin-bottom: 15rem;
+}
+
+.KakoNarucitiPageDiv div {
+	margin: 1rem;
+	margin-top: 1.5rem;
+}
+
+.KakoNarucitiHeader {
+	color: rgb(255, 72, 0);
+	text-align: center;
+	margin-bottom: 2rem;
+	font-size: 1.9rem;
+}
+
+.KakoNarucitiBigText {
+	font-size: 1.2rem;
+	margin: 1.7rem 0;
+}
+
+.KakoNarucitiPageDiv div span {
+	font-weight: 600;
+}

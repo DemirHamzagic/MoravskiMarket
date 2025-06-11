@@ -1,4 +1,4 @@
-import productImage from "../../assets/HomeProducts1/productImage.jpg";
+import productImage from "../../assets/HomeProducts3/productImage2.jpg";
 import { Link } from "react-router-dom";
 import { MyContext } from "../ContextFile";
 
@@ -13,7 +13,9 @@ const HomeProduct3 = () => {
 
 	return (
 		<div className="HomeProductList">
-			<img className="productImage" src={productImage} />
+			<Link to={"/categorije/Pcelarski proizvodi"}>
+				<img className="productImage2" src={productImage} />
+			</Link>
 			{ProductList4.map((el, index) => {
 				const Logo = liked[index] ? FaHeart : CiHeart;
 				const logoClass = liked[index]
@@ -37,7 +39,6 @@ const HomeProduct3 = () => {
 									setLiked(newLiked);
 									const product = {
 										...el,
-										image: ProductImages4[index],
 									};
 									newLiked[index] &&
 									!wishList.some(

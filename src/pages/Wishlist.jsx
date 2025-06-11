@@ -6,6 +6,7 @@ import { MyContext } from "../components/ContextFile";
 import WishListProducts from "../components/WishListProducts";
 
 const Wishlist = () => {
+	window.scrollTo(0, 0);
 	const { wishList } = useContext(MyContext);
 	return (
 		<div>

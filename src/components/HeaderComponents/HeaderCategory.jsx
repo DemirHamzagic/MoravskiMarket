@@ -3,16 +3,40 @@ import { FaArrowRight } from "react-icons/fa";
 
 import { useContext } from "react";
 import { MyContext } from "../ContextFile";
+import { Link } from "react-router-dom";
 
 const HeaderCategory = () => {
-	const { show1, setShow1, showSidebar, setShowSidebar } =
-		useContext(MyContext);
+	const {
+		show1,
+		setShow1,
+		showSidebar,
+		setShowSidebar,
+		ProductList1,
+		ProductList2,
+		ProductList3,
+		ProductList4,
+	} = useContext(MyContext);
 	const toggleOnBackdrop = () => {
 		if (showSidebar) {
 			setShowSidebar(!showSidebar);
 			setShow1("-30rem");
 		}
 	};
+	const products = [
+		ProductList1,
+		ProductList2,
+		ProductList3,
+		ProductList4,
+	].flat(Infinity);
+	const categoryList = {};
+	products.forEach((product) => {
+		const category = product.title1;
+		if (categoryList[category]) {
+			categoryList[category]++;
+		} else {
+			categoryList[category] = 1;
+		}
+	});
 	return (
 		<div>
 			<div
@@ -41,26 +65,22 @@ const HeaderCategory = () => {
 						Proizvodi na akciji
 						<FaArrowRight className="arrowIcon" />
 					</button>
-					<button>
-						Proizvodjaci <FaArrowRight className="arrowIcon" />
-					</button>
+					<Link to={"/proizvodjaci"}>
+						<button>
+							Proizvodjaci <FaArrowRight className="arrowIcon" />
+						</button>
+					</Link>
 				</div>
 				<div className="categoryItems">
-					<button>Ostalo</button>
-					<button>Mlecni proizvodi</button>
-					<button>Meso i preradjevine</button>
-					<button>Povrce i preradjevine</button>
-					<button>Voce i preradjevine</button>
-					<button>Sokovi i vocni sirupi</button>
-					<button>Zitarice i testa</button>
-					<button>Biljni proizvodi</button>
-					<button>Kolaci i slatkisi</button>
-					<button>Pcelarski proizvodi</button>
-					<button>Alkoholna pica</button>
-					<button>Ambalaza</button>
-					<button>Domaca radinost</button>
-					<button>Suveniri</button>
-					<button>Promo paketi</button>
+					{Object.entries(categoryList).map(([category, count]) => {
+						return (
+							<Link to={`/categorije/${category}`}>
+								<button>
+									{category} ({count})
+								</button>
+							</Link>
+						);
+					})}
 				</div>
 			</div>
 		</div>

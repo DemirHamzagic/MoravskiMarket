@@ -34,6 +34,10 @@
 	margin-top: 4rem;
 }
 
+.shopCategoryDiv img:hover {
+	opacity: 0.8;
+}
+
 .ShopProductList {
 	margin-left: 0.5rem;
 }
