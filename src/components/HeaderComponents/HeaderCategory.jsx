@@ -1,6 +1,7 @@
 import { IoCloseOutline } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa";
 
+import { ProductData } from "../../data/ProductsData";
 import { useContext } from "react";
 import { MyContext } from "../ContextFile";
 import { Link } from "react-router-dom";
@@ -11,10 +12,8 @@ const HeaderCategory = () => {
 		setShow1,
 		showSidebar,
 		setShowSidebar,
-		ProductList1,
-		ProductList2,
-		ProductList3,
-		ProductList4,
+		mainColor,
+		textColor,
 	} = useContext(MyContext);
 	const toggleOnBackdrop = () => {
 		if (showSidebar) {
@@ -22,12 +21,7 @@ const HeaderCategory = () => {
 			setShow1("-30rem");
 		}
 	};
-	const products = [
-		ProductList1,
-		ProductList2,
-		ProductList3,
-		ProductList4,
-	].flat(Infinity);
+	const products = ProductData.flat(Infinity);
 	const categoryList = {};
 	products.forEach((product) => {
 		const category = product.title1;
@@ -47,8 +41,12 @@ const HeaderCategory = () => {
 				}}
 				className="overlay"
 			></div>
-			<div style={{ left: show1 }} className="categoryDiv">
+			<div
+				style={{ left: show1, backgroundColor: mainColor }}
+				className="categoryDiv"
+			>
 				<button
+					style={{ backgroundColor: mainColor, color: textColor }}
 					onClick={() => {
 						setShow1("-30rem");
 					}}
@@ -58,15 +56,24 @@ const HeaderCategory = () => {
 					Zatvorite meni
 				</button>
 				<div className="categoryImpoItems">
-					<button>
+					<button
+						style={{ backgroundColor: mainColor, color: textColor }}
+					>
 						Novo u ponudi <FaArrowRight className="arrowIcon" />
 					</button>
-					<button>
+					<button
+						style={{ backgroundColor: mainColor, color: textColor }}
+					>
 						Proizvodi na akciji
 						<FaArrowRight className="arrowIcon" />
 					</button>
 					<Link to={"/proizvodjaci"}>
-						<button>
+						<button
+							style={{
+								backgroundColor: mainColor,
+								color: textColor,
+							}}
+						>
 							Proizvodjaci <FaArrowRight className="arrowIcon" />
 						</button>
 					</Link>
@@ -75,7 +82,12 @@ const HeaderCategory = () => {
 					{Object.entries(categoryList).map(([category, count]) => {
 						return (
 							<Link to={`/categorije/${category}`}>
-								<button>
+								<button
+									style={{
+										backgroundColor: mainColor,
+										color: textColor,
+									}}
+								>
 									{category} ({count})
 								</button>
 							</Link>

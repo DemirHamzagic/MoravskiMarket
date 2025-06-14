@@ -10,8 +10,19 @@ import { TbGridDots } from "react-icons/tb";
 
 const HeaderLinks = () => {
 	const location = useLocation();
-	const { theme, setTheme, setShow1, setShow2, setShowSidebar, wishList } =
-		useContext(MyContext);
+	const {
+		mainColor,
+		setMainColor,
+		textColor,
+		setTextColor,
+		grayColor,
+		setGrayColor,
+		setShow1,
+		setShow2,
+		setShowSidebar,
+		wishList,
+		cart,
+	} = useContext(MyContext);
 	return (
 		<div className="linkHeader">
 			<button
@@ -97,25 +108,36 @@ const HeaderLinks = () => {
 			<div className="iconDiv">
 				<button
 					className="themeButton"
-					onClick={() =>
-						setTheme(theme === "white" ? "black" : "white")
-					}
+					onClick={() => {
+						setMainColor(
+							mainColor === "white" ? "rgb(27, 28, 31)" : "white"
+						);
+						setTextColor(textColor === "black" ? "white" : "black");
+						setGrayColor(
+							grayColor === "rgb(231, 231, 231)"
+								? "rgb(77, 75, 85)"
+								: "rgb(231, 231, 231)"
+						);
+					}}
 				>
-					{theme === "white" ? <IoIosMoon /> : <FiSun />}
+					{mainColor === "white" ? <IoIosMoon /> : <FiSun />}
 				</button>
 				<Link to="/lista-zelja" className="iconLink">
 					<div className="heartHeaderDiv">
 						<CiHeart />
-						<div className="">{wishList.length}</div>
+						<div>{wishList.length}</div>
 					</div>
 				</Link>
-				<FaBoxArchive
-					className="iconLink"
-					onClick={() => {
-						setShow2("0rem");
-						setShowSidebar(true);
-					}}
-				/>
+				<div className="boxIconDiv">
+					<FaBoxArchive
+						className="iconLink"
+						onClick={() => {
+							setShow2("0rem");
+							setShowSidebar(true);
+						}}
+					/>
+					<div>{cart.length}</div>
+				</div>
 				<Link to="/nalog" className="iconLink">
 					<CiUser />
 				</Link>

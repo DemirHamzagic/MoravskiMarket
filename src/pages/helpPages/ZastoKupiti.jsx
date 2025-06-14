@@ -1,9 +1,12 @@
 import "../../styles/helpPages/ZastoKupiti.css";
+import { useContext } from "react";
+import { MyContext } from "../../components/ContextFile";
 
 const ZastoKupiti = () => {
 	window.scrollTo(0, 0);
+	const { textColor } = useContext(MyContext);
 	return (
-		<div className="ZastoKupitiPageDiv">
+		<div style={{ color: textColor }} className="ZastoKupitiPageDiv">
 			<p className="pageTypeText">Naslovna - Zašto da kupujem Lokalno?</p>
 			<h1 className="ZastoKupitiHeader">Zašto da kupujem lokalno?</h1>
 			<div>
@@ -78,7 +81,12 @@ const ZastoKupiti = () => {
 					Moja je želja da moja deca, i deca moje dece osete mirise i
 					ukuse bakine kuhinje , naše domaće hrane!
 				</p>
-				<p className="ZastoKupitiBolderText">Šta je tvoja želja?</p>
+				<p
+					style={{ fontStyle: "italic" }}
+					className="ZastoKupitiBolderText"
+				>
+					Šta je tvoja želja?
+				</p>
 			</div>
 		</div>
 	);

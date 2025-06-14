@@ -1,9 +1,12 @@
 import "../../styles/helpPages/NacinPlacanja.css";
+import { useContext } from "react";
+import { MyContext } from "../../components/ContextFile";
 
 const NacinPlacanja = () => {
 	window.scrollTo(0, 0);
+	const { textColor } = useContext(MyContext);
 	return (
-		<div className="NacinPlacanjaPageDiv">
+		<div style={{ color: textColor }} className="NacinPlacanjaPageDiv">
 			<p className="pageTypeText">Naslovna - Kako kupiti?</p>
 			<div>
 				<p>

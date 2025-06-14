@@ -67,6 +67,7 @@ button {
 }
 
 .linkHeader {
+	margin: 0.5rem;
 	background-color: rgb(33, 121, 69);
 	display: flex;
 	align-items: center;
@@ -204,23 +205,140 @@ button {
 	right: 0rem;
 	background-color: white;
 	height: 100vh;
-	width: 17rem;
+	width: 20rem;
 	z-index: 2;
 	overflow-y: auto;
 	transition: right 0.2s;
-	text-align: center;
+}
+
+.emptyCartDiv {
 	padding-top: 5rem;
+	text-align: center;
+}
+
+.fullCartDiv {
+	display: flex;
+	flex-direction: column;
+}
+
+.cartParentDiv {
+	border-bottom: 1px solid rgb(209, 209, 209);
+}
+
+.cartImageDiv {
+	display: flex;
+	justify-content: center;
+}
+
+.cartProductImage {
+	width: 8rem;
+	height: 8rem;
+	margin: 0.5rem;
+}
+
+.cartText {
+	font-size: 1.5rem;
+	margin: 0.8rem;
 }
 
 .emptyCartText {
 	margin: 0.2rem;
 }
 
+.cartProductDiv {
+	background-color: rgb(241, 241, 241);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 0.8rem;
+}
+
+.cartPriceText {
+	font-size: 1.1rem;
+}
+
+.cartNameText {
+	font-size: 1.1rem;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+.cartProductPrice {
+	text-align: center;
+	margin: 0;
+	margin-bottom: 0.5rem;
+}
+
+.cartProductPrice span {
+	color: rgb(255, 72, 0);
+	font-weight: 600;
+}
+
+.cartRemoveButton {
+	width: 7rem;
+	height: 2.5rem;
+	border-radius: 0.5rem;
+	border: 1px solid rgb(223, 223, 223);
+	background-color: rgb(241, 241, 241);
+	margin-bottom: 1rem;
+}
+
+.removeButtonDiv {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.cartBuyButton {
+	color: white;
+	width: 18rem;
+	margin: 1rem;
+	font-size: 1.3rem;
+	font-weight: 600;
+	border-radius: 0.5rem;
+	border: none;
+	height: 3rem;
+	background-color: rgb(33, 121, 69);
+	position: absolute;
+	bottom: 0;
+}
+
+.cartBuyButton:hover {
+	opacity: 0.8;
+}
+
+/* HEART ICON DIV */
+
 .heartHeaderDiv {
 	position: relative;
 }
 
 .heartHeaderDiv div {
+	background-color: rgb(255, 72, 0);
+	color: white;
+	border-radius: 100%;
+	font-size: 0.8rem;
+	width: 1rem;
+	height: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: -0.3rem;
+	right: -0.2rem
+}
+
+.boxIconDiv {
+	position: relative;
+}
+
+.boxIconDiv .iconLink {
+	/* font-size: 0.9rem; */
+	margin-top: 4px;
+}
+
+.boxIconDiv div {
+	margin-top: 4px;
 	background-color: rgb(255, 72, 0);
 	color: white;
 	border-radius: 100%;

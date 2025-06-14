@@ -15,8 +15,8 @@ import { Link } from "react-router-dom";
 import { MyContext } from "../components/ContextFile";
 import { useContext, useState } from "react";
 const Home = () => {
-	window.scrollTo(0, 0);
-	const { activeDot, inactiveDot } = useContext(MyContext);
+	// window.scrollTo(0, 0);
+	const { activeDot, inactiveDot, textColor } = useContext(MyContext);
 	const [currentDot1, setDot1] = useState(0);
 	const [currentDot2, setDot2] = useState(0);
 	const [currentDot3, setDot3] = useState(0);
@@ -62,8 +62,12 @@ const Home = () => {
 			<HomeWelcomeDiv />
 
 			<div className="productDiv1">
-				<h1>Kupuj lokalno, da komšiji krava bude živa i zdrava!</h1>
-				<p>Izdvajamo za vas zdrave i kvalitetne domaće proizvode!</p>
+				<h1 style={{ color: textColor }}>
+					Kupuj lokalno, da komšiji krava bude živa i zdrava!
+				</h1>
+				<p style={{ color: textColor }}>
+					Izdvajamo za vas zdrave i kvalitetne domaće proizvode!
+				</p>
 				<HomeProduct1 />
 				<div className="productDots">
 					{productArray1.map((_, index) => {
@@ -103,8 +107,10 @@ const Home = () => {
 			</div>
 
 			<div className="productDiv3">
-				<h1>Pcelarski proizvodi</h1>
-				<p>Prirodni pčelinji proizvodi sa dugom tradicijom</p>
+				<h1 style={{ color: textColor }}>Pcelarski proizvodi</h1>
+				<p style={{ color: textColor }}>
+					Prirodni pčelinji proizvodi sa dugom tradicijom
+				</p>
 				<HomeProduct3 />
 				<div className="productDots">
 					{productArray3.map((_, index) => {

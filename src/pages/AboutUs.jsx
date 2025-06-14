@@ -1,25 +1,32 @@
 import "../styles/AboutUs.css";
+import { useContext } from "react";
+import { MyContext } from "../components/ContextFile";
 
 const AboutUs = () => {
 	window.scrollTo(0, 0);
+	const { textColor } = useContext(MyContext);
 	return (
 		<div className="aboutUsDiv">
-			<p className="pageTypeText">Naslovna - o nama</p>
+			<p style={{ color: textColor }} className="pageTypeText">
+				Naslovna - o nama
+			</p>
 			<div className="aboutHeadDiv">
 				<h1 className="orangeAboutText">O nama</h1>
-				<p>Moravski market, misija i ciljevi...</p>
+				<p style={{ color: textColor }}>
+					Moravski market, misija i ciljevi...
+				</p>
 			</div>
-			<h1>Mi smo Moravski market!</h1>
+			<h1 style={{ color: textColor }}>Mi smo Moravski market!</h1>
 			<h1 className="orangeAboutText">
 				Oaza zdravih lokalnih i domaćih proizvoda
 			</h1>
-			<p className="aboutUsText">
+			<p style={{ color: textColor }} className="aboutUsText">
 				Kod nas možete poručiti prehrambene i srodne proizvode lokalnih
 				proizvođača, mikro, malih i srednjih preduzeća, preduzetnika i
 				registrovanih poljoprivrednih gazdinstava sa područja Čačka,
 				Gornjeg Milanovca i Lučana.
 			</p>
-			<p className="aboutUsText">
+			<p style={{ color: textColor }} className="aboutUsText">
 				Mi smo Udruženje/ partnerstvo za ruralni razvoj Lokalna akciona
 				grupa Čačak - Gornji Milanovac, nestranačka, nevladina,
 				neprofitna organizacija osnovana 2019. -te godine u skladu sa
@@ -33,7 +40,7 @@ const AboutUs = () => {
 				poboljšanja kvaliteta života na seoskom području koje pokriva
 				Udruženje.
 			</p>
-			<p className="aboutUsText">
+			<p style={{ color: textColor }} className="aboutUsText">
 				Mi Udruženje vidimo kao alat kojim ćemo pokušati da damo
 				doprinos zaustavljanju propadanja sela na našem području kroz
 				povezivanje, umrežavanje, promociju i osmišljavanje proizvoda
@@ -44,7 +51,7 @@ const AboutUs = () => {
 				energetske efikasnosti, razvoja infrastrukture, kooperativa i
 				zadruga, skraćivanja puta hrane od njive do trpeze i sl.
 			</p>
-			<p className="aboutUsText">
+			<p style={{ color: textColor }} className="aboutUsText">
 				Osnivači Udruženja su predstavnici Agronomskog fakulteta u
 				Čačku, Instituta za voćarstvo iz Čačka, javnih komunalnih
 				preduzeća, obrazovnih institucija, zemljoradničkih zadruga,
@@ -53,7 +60,7 @@ const AboutUs = () => {
 				poljoprivrednih gazdinstava, koji se bave preradom voća, povrća
 				i drugim aktivnostima na seoskom području.
 			</p>
-			<p className="aboutUsText">
+			<p style={{ color: textColor }} className="aboutUsText">
 				Svrha Moravskog marketa je da na jednom mestu okupimo,
 				predstavimo, promovišemo i unapredimo prodaju lokalnih
 				proizvođača/prerađivača zdrave domaće hrane, kao i da motivišemo
@@ -64,7 +71,7 @@ const AboutUs = () => {
 				razvijanje privrednih aktivnosti, pre svega proizvodnje hrane na
 				našim selima, a samim tim i na njihov opstanak i razvoj.
 			</p>
-			<p className="aboutUsText">
+			<p style={{ color: textColor }} className="aboutUsText">
 				Više o našim aktivnostima možete videti na našem web portalu{" "}
 				<span className="aboutLinkText">www.lokalno.org</span>
 			</p>

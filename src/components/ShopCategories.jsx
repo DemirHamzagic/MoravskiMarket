@@ -1,39 +1,21 @@
 import "../styles/ShopCategory.css";
 import categoryImage from "../assets/ShopPictures/shopPic1.jpg";
-import { useContext, useState } from "react";
-import { MyContext } from "./ContextFile";
+
+import { useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { ProductData, ProductImagesData } from "../data/ProductsData";
+import { MyContext } from "./ContextFile";
 
 import { CiHeart } from "react-icons/ci";
 import { FaHeart } from "react-icons/fa";
 
 const ShopCategories = () => {
+	const { wishList, setWishList, grayColor, textColor } =
+		useContext(MyContext);
 	const { category } = useParams();
-	const {
-		ProductList1,
-		ProductList2,
-		ProductList3,
-		ProductList4,
-		ProductImages1,
-		ProductImages2,
-		ProductImages3,
-		ProductImages4,
-		setWishList,
-		wishList,
-	} = useContext(MyContext);
-	const image = [
-		ProductImages1,
-		ProductImages2,
-		ProductImages3,
-		ProductImages4,
-	].flat(Infinity);
-	const products = [
-		ProductList1,
-		ProductList2,
-		ProductList3,
-		ProductList4,
-	].flat(Infinity);
+	const image = ProductImagesData.flat(Infinity);
+	const products = ProductData.flat(Infinity);
 	const [liked, setLiked] = useState(Array(products.length).fill(false));
 
 	const proizvodjaciList = {};
@@ -49,16 +31,20 @@ const ShopCategories = () => {
 		});
 	return (
 		<div className="shopCategoryPageDiv">
-			<p>Naslovna - Prodavnica</p>
+			<p style={{ color: textColor }}>Naslovna - Prodavnica</p>
 			<div className="shopCategoryMainDiv">
 				<div className="categoryListDiv">
-					<Link to={"/prodavnica"}>- Sve kategorije</Link>
+					<Link style={{ color: textColor }} to={"/prodavnica"}>
+						- Sve kategorije
+					</Link>
 					<p className="ProizvodjaciText">{category.toUpperCase()}</p>
-					<p className="CategoryBigText">PROIZVODJACI</p>
+					<p style={{ color: textColor }} className="CategoryBigText">
+						PROIZVODJACI
+					</p>
 					{Object.entries(proizvodjaciList).map(
 						([proizvodjac, count]) => {
 							return (
-								<div>
+								<div style={{ color: textColor }}>
 									<input type="checkbox" />
 									<label>
 										{proizvodjac} - ({count})
@@ -78,7 +64,10 @@ const ShopCategories = () => {
 								? "heartIconProductA"
 								: "heartIconProductI";
 							return (
-								<div className="ShopProduct">
+								<div
+									style={{ backgroundColor: grayColor }}
+									className="ShopProduct"
+								>
 									<div className="ProductImageDiv">
 										<Link to={`/prodavnica/${el.id}`}>
 											<img
@@ -93,9 +82,7 @@ const ShopCategories = () => {
 												newLiked[index] =
 													!newLiked[index];
 												setLiked(newLiked);
-												const product = {
-													...el,
-												};
+												const product = { ...el };
 												newLiked[index] &&
 												!wishList.some(
 													(item) =>
@@ -117,7 +104,7 @@ const ShopCategories = () => {
 										/>
 									</div>
 
-									<p>
+									<p style={{ color: textColor }}>
 										<span>{el.title1}</span> -{" "}
 										<span>{el.title2}</span>
 									</p>
@@ -128,7 +115,10 @@ const ShopCategories = () => {
 											textDecoration: "none",
 										}}
 									>
-										<h2 className="ShopProductName">
+										<h2
+											style={{ color: textColor }}
+											className="ShopProductName"
+										>
 											{el.name}
 										</h2>
 									</Link>

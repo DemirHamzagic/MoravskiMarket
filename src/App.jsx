@@ -22,10 +22,12 @@ import NacinPlacanja from "./pages/helpPages/NacinPlacanja";
 import PrivacePolicy from "./pages/helpPages/PrivacePolicy";
 import ZastoKupiti from "./pages/helpPages/ZastoKupiti";
 import BlogPage from "./components/BlogPage";
+import { useContext } from "react";
 
 const App = () => {
+	const { mainColor } = useContext(MyContext);
 	return (
-		<div className="rotDiv">
+		<div style={{ backgroundColor: mainColor }} className="rotDiv">
 			<BrowserRouter>
 				<Header />
 				<Routes>

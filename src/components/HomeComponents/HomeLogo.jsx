@@ -7,9 +7,13 @@ import logo6 from "../../assets/LogoPictures/logoPic6.jpg";
 import logo7 from "../../assets/LogoPictures/logoPic7.jpg";
 import logo8 from "../../assets/LogoPictures/logoPic8.jpg";
 
+import { useContext } from "react";
+import { MyContext } from "../ContextFile";
+
 const HomeLogo = () => {
+	const { textColor } = useContext(MyContext);
 	return (
-		<div className="HomeLogoDiv">
+		<div style={{ color: textColor }} className="HomeLogoDiv">
 			<h1>Realizatori inicijative</h1>
 			<p>Organizacije i udruženja koja sprovode i finansiraju projekat</p>
 			<div className="logoDiv">
@@ -23,8 +27,11 @@ const HomeLogo = () => {
 				<img src={logo8} />
 			</div>
 			<p className="LogoLongText">
-				Izradu ovog web shopa finansirala je Evropska unija u partnerstvu sa Vladom Republike Srbije, preko programa EU PRO Plus. Sadržaj stranice je isključiva odgovornost
-				Udruženja "Unija Čačak 2000" i ni na koji način ne odražava stavove Evropske unije.
+				Izradu ovog web shopa finansirala je Evropska unija u
+				partnerstvu sa Vladom Republike Srbije, preko programa EU PRO
+				Plus. Sadržaj stranice je isključiva odgovornost Udruženja
+				"Unija Čačak 2000" i ni na koji način ne odražava stavove
+				Evropske unije.
 			</p>
 		</div>
 	);

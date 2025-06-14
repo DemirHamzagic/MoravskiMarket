@@ -1,24 +1,39 @@
 import "../styles/Login.css";
+import { MyContext } from "../components/ContextFile";
+import { useContext } from "react";
 
 const Login = () => {
-	window.scrollTo(0, 0);
+	const { mainColor, grayColor, textColor } = useContext(MyContext);
+
 	return (
-		<div className="loginPageDiv">
-			<p className="pageTypeText">Naslovna - Nalog</p>
+		<div style={{ backgroundColor: mainColor }} className="loginPageDiv">
+			<p style={{ color: textColor }} className="pageTypeText">
+				Naslovna - Nalog
+			</p>
 			<div className="loginBoxDiv">
 				<form className="loginDiv">
-					<h1>Ulogujte se</h1>
-					<p>Email:</p>
-					<input required className="loginEmailInput" />
-					<p>Lozinka:</p>
-					<input required className="loginPasswordInput" />
-					<div>
+					<h1 style={{ color: textColor }}>Ulogujte se</h1>
+					<p style={{ color: textColor }}>Email:</p>
+					<input
+						style={{ color: textColor, backgroundColor: grayColor }}
+						required
+						className="loginEmailInput"
+					/>
+					<p style={{ color: textColor }}>Lozinka:</p>
+					<input
+						style={{ color: textColor, backgroundColor: grayColor }}
+						required
+						className="loginPasswordInput"
+					/>
+					<div style={{ color: textColor }}>
 						<input type="checkbox" />
 						<label>Zapamti me</label>
 					</div>
 					<button className="loginButton">Ulogujte se</button>
-					<p className="registerText">REGISTRUJTE SE</p>
-					<p>Zaboravili se lozinku?</p>
+					<p style={{ color: textColor }} className="registerText">
+						REGISTRUJTE SE
+					</p>
+					<p style={{ color: textColor }}>Zaboravili se lozinku?</p>
 				</form>
 			</div>
 		</div>

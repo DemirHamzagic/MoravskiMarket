@@ -10,17 +10,21 @@ import { useContext, useState } from "react";
 const DistirbutivniCentar = () => {
 	window.scrollTo(0, 0);
 	const CentarImageArray = [0, 1, 2, 3];
-	const { activeDot, inactiveDot } = useContext(MyContext);
+	const { activeDot, inactiveDot, textColor } = useContext(MyContext);
 	const [currentDot, setDot] = useState(0);
 	return (
 		<div className="centarPageDiv">
-			<p className="pageTypeText">Naslovna - Kontakt</p>
+			<p style={{ color: textColor }} className="pageTypeText">
+				Naslovna - Kontakt
+			</p>
 			<div className="centarHeaderDiv">
 				<h1>Distributivni centar</h1>
-				<p>Posetite nas i preuzmite poručene proizvode</p>
+				<p style={{ color: textColor }}>
+					Posetite nas i preuzmite poručene proizvode
+				</p>
 			</div>
 			<h2 className="centarPhoneSpan">Želite da prodajete online?</h2>
-			<p>
+			<p style={{ color: textColor }}>
 				Uvećajte vaše prihode, pristupanjem najširoj mreži prodavaca na
 				siguran i transparentan način. Ukoliko želite da prodajete vaše
 				proizvode preko našeg portala možete nas pozvati na tel: 061 67
@@ -30,8 +34,8 @@ const DistirbutivniCentar = () => {
 				</Link>
 				, a možete i direkno doći u distributivni centar.
 			</p>
-			<h2>Distributivni centar</h2>
-			<p>
+			<h2 style={{ color: textColor }}>Distributivni centar</h2>
+			<p style={{ color: textColor }}>
 				Predviđeno je da bude prodajno - izložbeno - distributivni
 				centar, odnosno da se prostor koristi multifunkcionalno. U njemu
 				će biti izloženi naši zdravi, lokalni, domaći proizvodi, koji su
@@ -40,10 +44,16 @@ const DistirbutivniCentar = () => {
 				odnosno za sabiranje, odvajanje, pakovanje i eventualno
 				preuzimanje ili isporuku poručenih proizvoda.
 			</p>
-			<h3>Distributivni centar se nalazi na adresi:</h3>
-			<p className="centarAdressText">Bate Jankovića 48</p>
-			<p className="centarAdressText">32000 Čačak, Srbija</p>
-			<p>
+			<h3 style={{ color: textColor }}>
+				Distributivni centar se nalazi na adresi:
+			</h3>
+			<p style={{ color: textColor }} className="centarAdressText">
+				Bate Jankovića 48
+			</p>
+			<p style={{ color: textColor }} className="centarAdressText">
+				32000 Čačak, Srbija
+			</p>
+			<p style={{ color: textColor }}>
 				Tel: <span className="centarPhoneSpan">061 67 15 941</span>
 			</p>
 			<div className="centarImagesDiv">

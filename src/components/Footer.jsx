@@ -7,10 +7,13 @@ import { LuFacebook } from "react-icons/lu";
 import { FaInstagram } from "react-icons/fa";
 import { LuYoutube } from "react-icons/lu";
 import { Link } from "react-router-dom";
+import { MyContext } from "./ContextFile";
+import { useContext } from "react";
 
 const Footer = () => {
+	const { mainColor } = useContext(MyContext)
 	return (
-		<div>
+		<div style={{backgroundColor: mainColor}}>
 			<img className="backgroundImage" src={slika1} />
 			<div className="footerInfoDiv">
 				<div className="footerChildDiv">

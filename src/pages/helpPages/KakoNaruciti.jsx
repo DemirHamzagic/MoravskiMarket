@@ -1,9 +1,12 @@
 import "../../styles/helpPages/KakoNaruciti.css";
+import { useContext } from "react";
+import { MyContext } from "../../components/ContextFile";
 
 const KakoNaruciti = () => {
 	window.scrollTo(0, 0);
+	const { textColor } = useContext(MyContext);
 	return (
-		<div className="KakoNarucitiPageDiv">
+		<div style={{ color: textColor }} className="KakoNarucitiPageDiv">
 			<p className="pageTypeText">Naslovna - Kako kupiti?</p>
 			<h1 className="KakoNarucitiHeader">
 				Kako napraviti porudžbinu, kupiti proizvod?

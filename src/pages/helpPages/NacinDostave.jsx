@@ -1,10 +1,13 @@
 import image from "../../assets/NacinDostaveImg.jpg";
 import "../../styles/helpPages/NacinDostave.css";
+import { useContext } from "react";
+import { MyContext } from "../../components/ContextFile";
 
 const NacinDostave = () => {
 	window.scrollTo(0, 0);
+	const { textColor } = useContext(MyContext);
 	return (
-		<div className="NacinDostavePageDiv">
+		<div style={{ color: textColor }} className="NacinDostavePageDiv">
 			<p className="pageTypeText">Naslovna - Način dostave</p>
 			<h1 className="NacinDostaveHeader">Način dostave</h1>
 			<div>

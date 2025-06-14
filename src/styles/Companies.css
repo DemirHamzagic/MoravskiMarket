@@ -18,6 +18,8 @@
 .companyImageDiv {
 	display: flex;
 	align-items: center;
+	padding: 0.5rem;
+	margin: 0.5rem;
 }
 
 .companyImage {

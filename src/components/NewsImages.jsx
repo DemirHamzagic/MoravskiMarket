@@ -1,11 +1,16 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { MyContext } from "./ContextFile";
+
 import slika1 from "../assets/NewsImages/newsImage1.jpg";
 import slika2 from "../assets/NewsImages/newsImage2.jpg";
 import slika3 from "../assets/NewsImages/newsImage3.jpg";
 import slika4 from "../assets/NewsImages/newsImage4.jpg";
-
 import { CiCalendar } from "react-icons/ci";
+
 const NewsImages = () => {
+	const { textColor } = useContext(MyContext);
+
 	const NewsList = [
 		{
 			date: "19. Oct 2024",
@@ -52,9 +57,13 @@ const NewsImages = () => {
 								className="newsLinkHeader"
 								to={`/news/${el.vest}`}
 							>
-								<h1>{el.title1}</h1>
+								<h1 style={{ color: textColor }}>
+									{el.title1}
+								</h1>
 							</Link>
-							<p style={{ margin: "0" }}>{el.title2}</p>
+							<p style={{ margin: "0", color: textColor }}>
+								{el.title2}
+							</p>
 							<Link className="newsLink" to={`/news/${el.vest}`}>
 								<p className="newsMoreText">Detaljnije →</p>
 							</Link>

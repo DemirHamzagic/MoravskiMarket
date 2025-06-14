@@ -20,7 +20,11 @@ import image19 from "../assets/CompaniesPictures/companyPic19.jpg";
 import image20 from "../assets/CompaniesPictures/companyPic20.png";
 import image21 from "../assets/CompaniesPictures/companyPic21.png";
 
+import { MyContext } from "./ContextFile";
+import { useContext } from "react";
+
 const CompaniesList = () => {
+	const { grayColor, textColor } = useContext(MyContext);
 	const List = [
 		{
 			image: image1,
@@ -130,17 +134,36 @@ const CompaniesList = () => {
 	];
 	return (
 		<div className="companyPageDiv">
-			<p className="pageTypeText">Naslovna - Proizvodjaci</p>
+			<p style={{ color: textColor }} className="pageTypeText">
+				Naslovna - Proizvodjaci
+			</p>
 			<div className="companyInputDiv">
-				<input className="companyInput" placeholder="Pretraga..." />
+				<input
+					style={{ backgroundColor: grayColor, color: textColor }}
+					className="companyInput"
+					placeholder="Pretraga..."
+				/>
 			</div>
 			{List.map((el) => {
 				return (
 					<div className="companyLetterDiv">
-						<h1 className="companyDivHeader">{el.title[0]}</h1>
-						<div className="companyImageDiv">
+						<h1
+							style={{ color: textColor }}
+							className="companyDivHeader"
+						>
+							{el.title[0]}
+						</h1>
+						<div
+							style={{ backgroundColor: grayColor }}
+							className="companyImageDiv"
+						>
 							<img className="companyImage" src={el.image} />
-							<p className="companyDivText1">{el.title}</p>
+							<p
+								style={{ color: textColor }}
+								className="companyDivText1"
+							>
+								{el.title}
+							</p>
 							<p className="companyDivText2">{el.productNum}</p>
 						</div>
 					</div>

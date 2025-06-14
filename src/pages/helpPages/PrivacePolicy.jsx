@@ -1,9 +1,12 @@
 import "../../styles/helpPages/PrivacePolicy.css";
+import { useContext } from "react";
+import { MyContext } from "../../components/ContextFile";
 
 const PrivacePolicy = () => {
 	window.scrollTo(0, 0);
+	const { textColor } = useContext(MyContext);
 	return (
-		<div className="PrivacePolicyPageDiv">
+		<div style={{ color: textColor }} className="PrivacePolicyPageDiv">
 			<p className="pageTypeText">Naslovna - Politika privatnosti</p>
 			<div>
 				<h1 className="PrivacePolicyHeader">

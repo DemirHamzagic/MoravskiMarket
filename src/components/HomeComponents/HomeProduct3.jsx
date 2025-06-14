@@ -1,14 +1,17 @@
 import productImage from "../../assets/HomeProducts3/productImage2.jpg";
 import { Link } from "react-router-dom";
 import { MyContext } from "../ContextFile";
+import { ProductData, ProductImagesData } from "../../data/ProductsData";
 
 import { CiHeart } from "react-icons/ci";
 import { FaHeart } from "react-icons/fa";
 import { useState, useContext } from "react";
 
 const HomeProduct3 = () => {
-	const { wishList, setWishList, ProductList4, ProductImages4 } =
+	const { wishList, setWishList, textColor, grayColor } =
 		useContext(MyContext);
+	const ProductList4 = ProductData[3];
+	const ProductImages4 = ProductImagesData[3];
 	const [liked, setLiked] = useState(Array(ProductList4.length).fill(false));
 
 	return (
@@ -22,7 +25,11 @@ const HomeProduct3 = () => {
 					? "heartIconProductA"
 					: "heartIconProductI";
 				return (
-					<div key={index} className="HomeProduct">
+					<div
+						style={{ backgroundColor: grayColor }}
+						key={index}
+						className="HomeProduct"
+					>
 						<div className="ProductImageDiv">
 							<Link to={`/prodavnica/${el.id}`}>
 								<img
@@ -55,14 +62,19 @@ const HomeProduct3 = () => {
 								}}
 							/>
 						</div>
-						<p>
+						<p style={{ color: textColor }}>
 							<span>{el.title1}</span> - <span>{el.title2}</span>
 						</p>
 						<Link
 							to={`/prodavnica/${el.id}`}
 							className="productLinkName"
 						>
-							<h2 className="HomeProductName">{el.name}</h2>
+							<h2
+								style={{ color: textColor }}
+								className="HomeProductName"
+							>
+								{el.name}
+							</h2>
 						</Link>
 						<h1 className="HomePriceText">{el.price}</h1>
 					</div>

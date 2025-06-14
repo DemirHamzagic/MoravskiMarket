@@ -7,12 +7,14 @@ import WishListProducts from "../components/WishListProducts";
 
 const Wishlist = () => {
 	window.scrollTo(0, 0);
-	const { wishList } = useContext(MyContext);
+	const { wishList, mainColor, textColor } = useContext(MyContext);
 	return (
-		<div>
-			<p className="pageTypeText">Naslovna - Lista zelja</p>
+		<div style={{ backgroundColor: mainColor }}>
+			<p style={{ color: textColor }} className="pageTypeText">
+				Naslovna - Lista zelja
+			</p>
 			{wishList.length === 0 ? (
-				<div className="wishlistTxtDiv">
+				<div className="wishlistTxtDiv" style={{ color: textColor }}>
 					<FaRegHeart />
 					<p>Lista želja je prazna.</p>
 				</div>

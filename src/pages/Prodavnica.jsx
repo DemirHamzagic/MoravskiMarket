@@ -1,20 +1,16 @@
 import "../styles/Prodavnica.css";
 import categoryImage from "../assets/ShopPictures/shopPic1.jpg";
 import ShopProducts from "../components/ShopProducts";
+
+import { ProductData } from "../data/ProductsData";
+import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { MyContext } from "../components/ContextFile";
-import { Link } from "react-router-dom";
 
 const Prodavnica = () => {
 	window.scrollTo(0, 0);
-	const { ProductList1, ProductList2, ProductList3, ProductList4 } =
-		useContext(MyContext);
-	const products = [
-		ProductList1,
-		ProductList2,
-		ProductList3,
-		ProductList4,
-	].flat(Infinity);
+	const { mainColor, textColor } = useContext(MyContext);
+	const products = ProductData.flat(Infinity);
 	const categoryList = {};
 	products.forEach((product) => {
 		const category = product.title1;
@@ -26,14 +22,19 @@ const Prodavnica = () => {
 	});
 	return (
 		<div className="shopPageDiv">
-			<p>Naslovna - Prodavnica</p>
+			<p style={{ color: textColor }}>Naslovna - Prodavnica</p>
 			<div className="shopDiv">
 				<div className="shopCategoryDiv">
 					<p>KATEGORIJE</p>
 					{Object.entries(categoryList).map(([category, count]) => {
 						return (
 							<Link to={`/categorije/${category}`}>
-								<button>
+								<button
+									style={{
+										color: textColor,
+										backgroundColor: mainColor,
+									}}
+								>
 									{category} ({count})
 								</button>
 							</Link>

@@ -2,13 +2,16 @@ import "../styles/Prodavnica.css";
 import { useContext, useState } from "react";
 import { MyContext } from "./ContextFile";
 import { Link } from "react-router-dom";
+import { ProductData, ProductImagesData } from "../data/ProductsData";
 
 import { CiHeart } from "react-icons/ci";
 import { FaHeart } from "react-icons/fa";
 
 const ShopProducts = () => {
-	const { wishList, setWishList, ProductImages1, ProductList1 } =
+	const { wishList, setWishList, textColor, grayColor } =
 		useContext(MyContext);
+	const ProductList1 = ProductData[0];
+	const ProductImages1 = ProductImagesData[0];
 	const { currentBox, setBox } = useContext(MyContext);
 	const [liked, setLiked] = useState(Array(ProductList1.length).fill(false));
 
@@ -24,7 +27,7 @@ const ShopProducts = () => {
 	return (
 		<div className="ShopProductList">
 			<div className="shopHeader">
-				<p>16 od 32 proizvoda</p>
+				<p style={{ color: textColor }}>16 od 32 proizvoda</p>
 				<div className="shopBoxDiv">
 					{ListNumber.map((_, index) => {
 						return (
@@ -51,7 +54,10 @@ const ShopProducts = () => {
 						? "heartIconProductA"
 						: "heartIconProductI";
 					return (
-						<div className="ShopProduct">
+						<div
+							style={{ backgroundColor: grayColor }}
+							className="ShopProduct"
+						>
 							<div className="ProductImageDiv">
 								<Link to={`/prodavnica/${el.id}`}>
 									<img
@@ -88,7 +94,7 @@ const ShopProducts = () => {
 								/>
 							</div>
 
-							<p>
+							<p style={{ color: textColor }}>
 								<span>{el.title1}</span> -{" "}
 								<span>{el.title2}</span>
 							</p>
@@ -99,7 +105,12 @@ const ShopProducts = () => {
 									textDecoration: "none",
 								}}
 							>
-								<h2 className="ShopProductName">{el.name}</h2>
+								<h2
+									style={{ color: textColor }}
+									className="ShopProductName"
+								>
+									{el.name}
+								</h2>
 							</Link>
 							<h1 className="ShopPriceText">{el.price}</h1>
 						</div>
@@ -107,7 +118,7 @@ const ShopProducts = () => {
 				})}
 			</div>
 			<div className="shopHeader">
-				<p>16 od 32 proizvoda</p>
+				<p style={{ color: textColor }}>16 od 32 proizvoda</p>
 				<div className="shopBoxDiv">
 					{ListNumber.map((_, index) => {
 						return (
